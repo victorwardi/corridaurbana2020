@@ -1,22 +1,312 @@
-.App {
+body {
+    color: #343a40 !important;
+}
+
+.curb-block-title {
+
+    line-height: 1.2;
+    border-bottom: 1px solid #ccc;
+    text-transform: uppercase;
+}
+
+.curb-block-title:after {
+    content: "";
+    width: 60px;
+    height: 5px;
+    display: block;
+    margin-bottom: -.0625rem;
+    margin-top: .75rem;
+    background-color: #5dbf9a;
+}
+
+.curb-content-height{
+    min-height: 500px;
+}
+
+/* ----------------- Posts ----------------- */
+
+.curb-post-infos {
+    bottom: 0;
+    position: absolute;
+    z-index: 1;
+    padding: .5rem !important;
+    margin-bottom: .5rem;
+
+}
+
+.curb-post {
+    position: relative;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.curb-post img {
+    width: 100%;
+}
+
+.curb-post::after {
+    display: block;
+    position: relative;
+    background-image: linear-gradient(to bottom, transparent 0%, #000000 100%);
+    margin-top: -100px;
+    height: 100px;
+    width: 100%;
+    content: '';
+}
+
+.curb-post-title {
+    color: #fff;
+    text-shadow: 1px 1px 3px rgb(0, 0, 0);
+    font-weight: bold;
+    font-size: 1.25rem;
+
+}
+
+/*For Desktops*/
+@media only screen and (min-width: 768px) {
+    .curb-post-title-1 {
+        font-size: 1.5rem;
+    }
+
+    .curb-post-title-2 {
+        font-size: 1.2rem;
+    }
+
+    .curb-post-title-3 {
+        font-size: 1.1rem;
+    }
+
+    .curb-post-title-4 {
+        font-size: 1rem;
+    }
+}
+
+/* ----------------- Post Single ----------------- */
+
+.curb-post-single img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* ----------------- Reviews ----------------- */
+
+.curb-review-stars {
+    color: gold;
+}
+
+/* ----------------- Calendar ----------------- */
+
+.curb-calendar .curb-event {
+    background-color: #f1f1f1;
+}
+
+.curb-event {
+    border-bottom: 1px solid #cccccc;
+}
+
+.curb-event:last-child {
+    border: 0;
+}
+
+.curb-event-date {
+    border: 1px solid #666666;
+    border-radius: 5px;
+    overflow: hidden;
+    font-weight: bold;
+}
+
+.curb-calendar .curb-event-date {
+    border: 0;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+
+.curb-event-month {
+    background-color: #5dbf9a;
+    color: #f3f3f3;
+}
+
+.curb-calendar .curb-event-month {
+    background: none;
+    color: inherit;
+}
+
+.curb-calendar .curb-event-day {
+    font-size: 1.5rem;
+    line-height: 1;
+}
+
+.curb-calendar .curb-event-year {
+    font-size: 0.75rem;
+}
+
+.curb-event-title {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.curb-calendar .curb-event-infos {
+    min-height: 70px;
+}
+
+.curb-calendar .curb-event-place {
+    font-size: 0.75rem;
+}
+
+.curb-calendar .curb-event-distance {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background-color: #b4a9a4;
+    color: #ffffff;
+
+}
+
+.curb-distance-5K {
+    background-color: #3498db;
+    border-radius: 50%;
+}
+
+.curb-distance-10K {
+    background-color: #10b59d;
+    border-radius: 50%;
+}
+
+.curb-distance-21K {
+    background-color: #eebf00;
+    border-radius: 50%;
+}
+
+.curb-distance-42K {
+    background-color: #ff5f25;
+    border-radius: 50%;
+}
+
+.curb-calendar .curb-event-distance-text {
+    font-size: 11px;
+    text-transform: uppercase;
+    padding-top: 50%;
+    padding-bottom: 50%;
+    font-weight: bold;
+    line-height: 0;
     text-align: center;
 }
 
-.App-logo {
-    height: 40vmin;
+.curb-calendar .curb-event-share-link{
+    border-top: 1px solid #fff;
+    bottom: 0;
+
 }
 
-.App-header {
-    background-color: #282c34;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
+.curb-calendar .curb-event-link  {
+    font-size: 0.75rem;
+    font-weight: bold;
+    background-color: #10b59d;
+    color: #f3f3f3!important;
+    text-align: center;
+    border-radius: 5px;
 }
 
-.App-link {
-    color: #09d3ac;
+.curb-calendar .curb-event-link:hover {
+
+    background-color: #0a5b4c;
+    color: #f3f3f3;
+    cursor: pointer;
+
+}
+
+
+/* ----------------- Calendar Filters ----------------- */
+
+.curb-filter-distance{
+
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: #b4a9a4;
+    color: #ffffff;
+}
+
+.curb-filter-distance-text {
+    font-size: 14px;
+    text-transform: uppercase;
+    padding-top: 50%;
+    padding-bottom: 50%;
+    font-weight: bold;
+    line-height: 0;
+    text-align: center;
+    background-color: #b4a9a4;
+}
+
+
+
+.curb-filter-distance:hover{
+    cursor: pointer;
+}
+/*.curb-filter-distance .curb-distance-5K:hover,*/
+.curb-filter-distance-selected .curb-distance-5K {
+    background-color: #3498db;
+
+
+}
+
+/*.curb-filter-distance .curb-distance-10K:hover,*/
+.curb-filter-distance-selected .curb-distance-10K{
+    background-color: #10b59d;
+
+}
+
+/*.curb-filter-distance .curb-distance-21K:hover,*/
+.curb-filter-distance-selected .curb-distance-21K {
+    background-color: #eebf00;
+
+}
+
+/*.curb-filter-distance .curb-distance-42K:hover,*/
+.curb-filter-distance-selected .curb-distance-42K {
+    background-color: #ff5f25;
+
+}
+
+
+
+/* ----------------- Footer ----------------- */
+
+.curb-footer h4 {
+    color: #fff;
+    font-weight: bold;
+}
+
+.curb-footer li {
+    list-style: none;
+}
+
+.curb-footer {
+    background: #333;
+    color: #fff;
+}
+
+.curb-footer-infos {
+    color: #fff;
+    background: #10b59d;
+}
+
+
+/* ----------------- Loader And Animations ----------------- */
+
+.loader {
+    border: 4px solid #f1f1f1; /* Light grey */
+    border-top: 4px solid #10b59d; /* Blue */
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }
