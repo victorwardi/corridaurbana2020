@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Header from "../components/ui/header/Header";
-import Footer from "../components/ui/footer/Footer";
-import Main from "../components/ui/main/Main";
+import Header from "./Header/Header";
+import Footer from "./Footer/Footer";
+import Main from "./Main/Main";
 
 
 const Layout = props => {

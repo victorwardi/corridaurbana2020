@@ -1,11 +1,158 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="016c1d2e-0cfa-4be2-aec3-ccc84fcee0ab" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/containers/Main/Main.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/containers/Menu/Nav.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/calendar/Calendar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Calendar/Calendar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/calendar/Corrida/Corrida.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/calendar/Corrida/Corrida.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/search/Search.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/search/Search.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ui/footer/Footer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Footer/Footer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ui/footer/Footer.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Footer/Footer.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ui/header/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Header/Header.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ui/header/Header.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Header/Header.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ui/main/Main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Main/Main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ui/main/Main.module.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ui/nav/Nav.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/calendar/Corrida/CorridaThumb/CorridaThumb.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ui/nav/Nav.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Menu/Nav.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/container/Layout.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Layout.js" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution>
+      <executable />
+    </execution>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1ScXmvlq9xpzV4Ni7CpiwGtpFGx" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="C:/Program Files/nodejs/node.exe" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/calendar/Events/Event" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\IntelliJ IDEA 2018.3\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Victor\Dev\React\corridaurbana2020\src\containers" />
+      <recent name="C:\Victor\Dev\React\corridaurbana2020\src\containers\Calendar" />
+      <recent name="C:\Victor\Dev\React\corridaurbana2020\src\container" />
+      <recent name="C:\Victor\Dev\React\corridaurbana2020\src\components\calendar" />
+      <recent name="C:\Victor\Dev\React\corridaurbana2020\src\components\layout\footer" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Victor\Dev\React\corridaurbana2020\src\components\calendar\Events\Event" />
+      <recent name="C:\Victor\Dev\React\corridaurbana2020\src\components\layout\header" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="npm.npm start">
+    <configuration name="Debug Application" type="JavascriptDebugType" uri="http://localhost:3000">
+      <method v="2" />
+    </configuration>
+    <configuration name="npm start" type="js.build_tools.npm">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="016c1d2e-0cfa-4be2-aec3-ccc84fcee0ab" name="Default Changelist" comment="" />
+      <created>1571840738503</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1571840738503</updated>
+      <workItem from="1571840742846" duration="6101000" />
+      <workItem from="1571864026822" duration="27979000" />
+    </task>
+    <task id="LOCAL-00001" summary="First Commit">
+      <created>1571855376985</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1571855376985</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Searching bar and filter">
+      <created>1571917635841</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1571917635841</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="First Commit" />
+    <MESSAGE value="Searching bar and filter" />
+    <option name="LAST_COMMIT_MESSAGE" value="Searching bar and filter" />
   </component>
 </project>

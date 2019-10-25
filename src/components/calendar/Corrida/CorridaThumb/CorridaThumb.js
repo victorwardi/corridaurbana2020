@@ -1,13 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import Distances from "./Distances/Distances";
+import Distances from "../Distances/Distances";
 
-const Corrida = props => {
+const CorridaThumb = props => {
 
     return (
         <>
-            <div className="col">
+            <div className="col-12 col-md-4">
                 <div className="row">
                     <div className="col m-2 curb-event">
                         <div className="row p-3">
@@ -46,7 +46,7 @@ const Corrida = props => {
                                 <FontAwesomeIcon icon="envelope"/>
                             </div>
                             <div className="col-4 text-right pr-0">
-                                <button className="curb-event-link p-1 px-2"><FontAwesomeIcon icon="info-circle"/> Infos
+                                <button className="curb-event-link p-1 px-2"><FontAwesomeIcon icon="info-circle" /> Infos
                                 </button>
                             </div>
                         </div>
@@ -57,29 +57,16 @@ const Corrida = props => {
     );
 };
 
-Corrida.propTypes = {
+CorridaThumb.propTypes = {
     title: PropTypes.string,
     date: PropTypes.string,
-    image: PropTypes.string,
-    place: PropTypes.string,
     link: PropTypes.string,
     dia: PropTypes.string,
     mes: PropTypes.string,
     ano: PropTypes.string,
-    mesExtenso:PropTypes.string,
-    data: PropTypes.string,
-    horario: PropTypes.string,
     cidade: PropTypes.string,
-    estado:PropTypes.string,
     uf: PropTypes.string,
-    local: PropTypes.string,
-    endereco: PropTypes.string,
-    distancias: PropTypes.array,
-    site: PropTypes.string,
-    mapa: PropTypes.string,
-    valor: PropTypes.string,
     imagem: PropTypes.string
-
 };
 
-export default Corrida;
+export default CorridaThumb;
