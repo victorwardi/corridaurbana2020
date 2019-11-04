@@ -1,0 +1,33 @@
+.Corridas {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 1em;
+}
+
+/* ##Extra Large */
+@media (min-width: 1200px) {
+      .Corridas {
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+      }
+}
+
+/* ## Large */
+@media  (min-width: 992px) and (max-width: 1199px)  {
+      .Corridas {
+            grid-template-columns: 1fr 1fr 1fr ;
+      }
+}
+
+/* ## Medium */
+@media (min-width: 768px) and (max-width: 991px) {
+      .Corridas {
+            grid-template-columns: 1fr 1fr ;
+      }
+
+}
+
+/* ##Small */
+@media (min-width: 576px) and (max-width: 767px){
+
+}
+

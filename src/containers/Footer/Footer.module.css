@@ -1,5 +1,13 @@
-.Footer{
-    min-height: 100px;
-    background-color: #282c34;
-    color: white;
+/* Footer */
+.Footer {
+    color: #f1f1f1;
+    padding: 20px;
+    text-align: center;
+    background: #151515;
+    grid-area: Footer;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+
 }
+
+

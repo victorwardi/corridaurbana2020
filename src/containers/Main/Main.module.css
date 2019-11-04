@@ -1,5 +1,7 @@
-.Main{
-    max-width: 1200px;
-    min-height: 500px;
-    margin: auto;
+
+.Main {
+    grid-area: Main;
+    background-color: #f1f1f1;
+    padding: 20px;
+
 }

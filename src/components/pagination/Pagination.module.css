@@ -1,0 +1,23 @@
+.Pagination{
+
+
+}
+
+.Pagination ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: space-around;
+}
+
+.Pagination li {
+    background-color: #10b59d;
+    color: #fff;
+    margin: 10px;
+    padding: 10px;
+}
+
+.Pagination .active{
+    background-color: #ce5121;
+}
