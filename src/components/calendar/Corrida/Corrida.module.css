@@ -1,0 +1,22 @@
+.Corrida{
+ display: grid;
+    grid-template-columns: 1fr;
+
+}
+.infos{
+
+}
+
+.banner{
+    background: #44cead;
+    min-height: 500px;
+}
+
+
+/* ##Extra Large */
+@media (min-width: 768px) {
+    .Corrida {
+        grid-template-columns: 2fr 1fr;
+    }
+}
+

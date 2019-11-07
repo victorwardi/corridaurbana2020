@@ -1,0 +1,4 @@
+.CorridaInfos{
+ display: grid;
+    grid-auto-rows: minmax(50px, auto);
+}

@@ -13,32 +13,6 @@ const CorridaThumb = props => {
         distancias = props.corrida.distancias;
     }
 
-    const generatePaleteColor = () =>{
-        const palete = [
-        ['Turquoise', 'Teal'],
-        ['Orange', 'Gold'],
-        ['DodgerBlue', 'SkyBlue'],
-        ['DarkRed', 'LightPink'],
-        ['Salmon', 'LightSalmon']
-        ]
-        return palete[Math.round((Math.random() * 1))];
-    };
-
-
-    const generateRandomColor = () =>{
-        let r = Math.round((Math.random() * 255)); //red 0 to 255
-        let g = Math.round((Math.random() * 255)); //green 0 to 255
-        let b = Math.round((Math.random() * 255)); //blue 0 to 255
-        return 'rgb(' + r + ', ' + g + ', ' + b + ')';
-    };
-
-    const generateBackgroundGradient = () =>{
-
-        const palete = generatePaleteColor();
-        return 'radial-gradient(circle at top left, ' + palete[1] + ', '+ palete[0] + ')';
-
-
-    }
 
     return (
         <>
@@ -47,7 +21,7 @@ const CorridaThumb = props => {
                         pathname: '/corrida/' + props.corrida.slug,
                         state: {corrida: props.corrida}
                     }}>
-                    <div className={classes.image} style={{backgroundImage: generateBackgroundGradient()}}>
+                    <div className={classes.image}>
                         <div className={classes.title}>{props.corrida.titulo}</div>
                         <span className={classes.uf}>{props.corrida.uf}</span>
                     </div>

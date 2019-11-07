@@ -1,16 +1,15 @@
-import React, {useEffect, useState, } from 'react';
+import React, {useEffect, useState,} from 'react';
+import classes from './Corrida.module.css';
 import PropTypes from 'prop-types';
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import Distances from "./Distances/Distances";
-import {useParams, useLocation} from "react-router";
+import {useParams} from "react-router";
 import axios from "axios";
-import {Helmet} from "react-helmet";
+import CorridaInfos from "./Infos/CorridaInfos";
 
 const Corrida = props => {
     console.log('CORRIDA');
     let {slug} = useParams();
 
- //   console.log(location.state.corrida);
+    //   console.log(location.state.corrida);
     const [corrida, setCorrida] = useState([]);
     const [isLoading, setIsLoading] = useState(false);
     const [distances, setDistances] = useState([]);
@@ -29,17 +28,17 @@ const Corrida = props => {
 
         }
 
-        if(corridaProps === ''){
-        const cacheCorrida = sessionStorage.getItem(slug);
-        if (cacheCorrida) {
-            console.log('>>>>>>>>>>> leu as corrida do CACHE');
-            const corrida = JSON.parse(cacheCorrida);
-            setCorrida(corrida);
+        if (corridaProps === '') {
+            const cacheCorrida = sessionStorage.getItem(slug);
+            if (cacheCorrida) {
+                console.log('>>>>>>>>>>> leu as corrida do CACHE');
+                const corrida = JSON.parse(cacheCorrida);
+                setCorrida(corrida);
+            } else {
+                console.log('>>>>>>>>>>> leu as corridas do SERVER');
+                getCorrida();
+            }
         } else {
-            console.log('>>>>>>>>>>> leu as corridas do SERVER');
-            getCorrida();
-        }
-        }else{
             console.log('>>>>>>>>>>> leu a corrida do props');
             setCorrida(corridaProps);
         }
@@ -47,94 +46,17 @@ const Corrida = props => {
     }, [slug, corridaProps]);
 
     return (
-        <>
-
-            <Helmet>
-                <meta charSet="utf-8"/>
-                <title>{`Corrida Urbana - Calendário - Corrida - ${corrida.titulo}`}</title>
-                <meta name="description"
-                      content={'Confira informações sobre a corrida ' + corrida.titulo + ' que irá acontecer em ' + corrida.endereco + '.'}/>
-                <link rel="canonical" href={props.location.pathname}/>
-
-                <script type="application/ld+json">{`
-                {
-                    "@context": "https://schema.org",
-                    "@type": "Event",
-                    "name": "${corrida.titulo}",
-                    "description": "Confira informações sobre a corrida ${corrida.titulo} que irá acontecer em ${corrida.endereco}.",
-                    "startDate": "${corrida.ano + '-' + corrida.mes + '-' + corrida.dia}",
-                    "endDate": "${corrida.ano + '-' + corrida.mes + '-' + corrida.dia}",
-                    "image": ["${corrida.imagem}"],
-                    "location": {
-                        "@type": "Place",
-                        "name": "${corrida.endereco}",
-                        "address": {
-                            "@type": "PostalAddress",
-                            "streetAddress": "${corrida.endereco}",
-                            "addressLocality": "${corrida.endereco}",
-                            "addressRegion": "${corrida.uf}",
-                            "addressCountry": "BR"
-                        }
-                    }               
+        <div className={classes.Corrida}>
+            <div className={classes.infos}>
+                {isLoading ? <div className="loader m-auto"></div> :
+                    <CorridaInfos corrida={corrida} distances={distances} url={props.location.pathname}/>
                 }
-            `}</script>
-
-            </Helmet>
-
-
-            <div className="col">
-                <div className="row">
-                    {isLoading ?
-                        (<div className="loader m-auto"></div>) :
-                        (
-                            <div className="col m-2">
-
-                                <div className="row p-3">
-                                    <div className="col-9 col-md-12 col-lg-9 p-0 curb-event-infos">
-                                        <div className="row">
-                                            <div className="col curb-event-title">{corrida.titulo}</div>
-
-                                        </div>
-                                        <div className="row">
-                                            <div className="col curb-event-place">
-                                                <FontAwesomeIcon icon="globe-americas"/>{corrida.local}
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="col-3 col-md-12 col-lg-3 pl-0 curb-event-date">
-                                        <div className="row">
-                                            <div className="col text-right m-0 p-0"><span
-                                                className="curb-event-day">{corrida.dia}</span><span
-                                                className="curb-event-month">{corrida.mes}</span></div>
-                                        </div>
-                                        <div className="row">
-                                            <div className="col text-right m-0 p-0 curb-event-year">{corrida.ano}</div>
-                                        </div>
-                                    </div>
-                                </div>
-
-
-                                <div className="row">
-                                    <div className="col mt-1">
-                                        <Distances distances={distances}/>
-                                    </div>
-                                </div>
-                                <div className="row curb-event-share-link p-2 m-1 mt-2">
-                                    <div className="col-8 curb-event-share pl-0">
-                                        <FontAwesomeIcon icon={['fab', 'whatsapp']}/>
-                                        <FontAwesomeIcon icon={['fab', 'facebook']} className="mx-2"/>
-                                        <FontAwesomeIcon icon="envelope"/>
-                                    </div>
-                                    <div className="col-4 text-right pr-0">
-                                        <button className="curb-event-link p-1 px-2"><FontAwesomeIcon
-                                            icon="info-circle"/> Infos
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>)}
-                </div>
             </div>
-        </>
+            <div className={classes.banner}>
+
+            </div>
+
+        </div>
     );
 };
 
