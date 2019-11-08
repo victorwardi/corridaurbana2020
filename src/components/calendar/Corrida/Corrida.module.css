@@ -1,13 +1,13 @@
-.Corrida{
- display: grid;
+.Corrida {
+    display: grid;
     grid-template-columns: 1fr;
-
-}
-.infos{
-
 }
 
-.banner{
+.infos {
+
+}
+
+.banner {
     background: #44cead;
     min-height: 500px;
 }
@@ -16,6 +16,8 @@
 /* ##Extra Large */
 @media (min-width: 768px) {
     .Corrida {
+        max-width: 1200px;
+        margin: auto;
         grid-template-columns: 2fr 1fr;
     }
 }

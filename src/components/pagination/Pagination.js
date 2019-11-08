@@ -11,7 +11,7 @@ const Pagination = props => {
     for (let i = 1; i <= props.total; i++) {
         pagination.push(
             <li key={i} className={props.active === i.toString() ? classes.active : ''}>
-                <Link to={props.url + '/' + i}>{i}</Link>
+                <Link to={props.url + i}>{i}</Link>
             </li>
         )
     }

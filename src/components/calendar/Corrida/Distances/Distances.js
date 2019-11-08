@@ -4,16 +4,20 @@ import PropTypes from "prop-types";
 
 const Distances = (props) => {
 
-    return (
-        <>
-            {
+    let distances = [];
+    if (props.distances !== undefined && props.distances != null ) {
+        distances = props.distances;
+    }
 
-               props.distances.length > 0 ? (
-                    props.distances.map((distance, index) => (
+    return (
+        <div>
+            {
+               distances.length > 0 ? (
+                    distances.map((distance, index) => (
                         <Distance key={index} value={distance}/>
                     ))) : ('')
             }
-        </>
+        </div>
     );
 };
 

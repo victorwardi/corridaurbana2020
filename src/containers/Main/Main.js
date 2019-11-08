@@ -10,8 +10,10 @@ const Main = () => {
     return (
         <div className={classes.Main}>
 <Switch>
-                <Route path={'/calendario/:uf/:page?'} component={Calendar}/>
-                <Route path={'/calendario/:uf'} component={Search}/>
+                <Route path={'/calendario/:uf?/:page?'}>
+                    <Search/>
+                    <Calendar/>
+                </Route>
                 <Route path={'/corrida/:slug'} component={Corrida}/>
                <Route  path={'/'} render={() =>(<h1>TESTE ROUTE</h1>)}/>
 </Switch>

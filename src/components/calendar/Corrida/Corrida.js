@@ -7,22 +7,19 @@ import CorridaInfos from "./Infos/CorridaInfos";
 
 const Corrida = props => {
     console.log('CORRIDA');
+    console.log(props);
     let {slug} = useParams();
 
     //   console.log(location.state.corrida);
     const [corrida, setCorrida] = useState([]);
     const [isLoading, setIsLoading] = useState(false);
-    const [distances, setDistances] = useState([]);
     const corridaProps = props.location.state !== undefined ? props.location.state.corrida : '';
     useEffect(() => {
         async function getCorrida() {
             setIsLoading(true);
-            const response = await axios('https://www.corridaurbana.com.br/wp-json/calendario/corrida/' + slug);
+            const response = await axios('/corrida/' + slug);
             console.log(response.data);
             setCorrida(response.data);
-            if (response.data.distancias !== undefined) {
-                setDistances(response.data.distancias);
-            }
             sessionStorage.setItem(slug, JSON.stringify(response.data));
             setIsLoading(false);
 
@@ -31,15 +28,15 @@ const Corrida = props => {
         if (corridaProps === '') {
             const cacheCorrida = sessionStorage.getItem(slug);
             if (cacheCorrida) {
-                console.log('>>>>>>>>>>> leu as corrida do CACHE');
+                console.log('>>>>>>>>>>> leu a corrida ' + slug + ' do CACHE');
                 const corrida = JSON.parse(cacheCorrida);
                 setCorrida(corrida);
             } else {
-                console.log('>>>>>>>>>>> leu as corridas do SERVER');
+                console.log('>>>>>>>>>>> leu a corrida ' + slug + '  do SERVER');
                 getCorrida();
             }
         } else {
-            console.log('>>>>>>>>>>> leu a corrida do props');
+            console.log('>>>>>>>>>>> leu a corrida ' + slug + ' do props');
             setCorrida(corridaProps);
         }
 
@@ -49,7 +46,7 @@ const Corrida = props => {
         <div className={classes.Corrida}>
             <div className={classes.infos}>
                 {isLoading ? <div className="loader m-auto"></div> :
-                    <CorridaInfos corrida={corrida} distances={distances} url={props.location.pathname}/>
+                    <CorridaInfos corrida={corrida} url={props.location.pathname}/>
                 }
             </div>
             <div className={classes.banner}>

@@ -18,14 +18,35 @@
 .image {
     width: 100%;
     min-height: 125px;
-    background-image: linear-gradient(to top right, #1abc9c, #005c5f);
+    background-image: linear-gradient(to top right, #adb7c2, #3c4047);
     padding: 15px;
     display: flex;
     justify-content: space-between;
 }
 
+.imageRJ{
+    background-image: linear-gradient(to top right, #1abc9c, #005c5f);
+}
 
-.title {
+.imageSP{
+    background-image: linear-gradient(to top right, #2ba3ff, #15416a);
+}
+
+.imageMG{
+     background-image: linear-gradient(to top right, #ff64a2, #cf1755);
+}
+
+.imageBA{
+    background-image: linear-gradient(to top right, #ff8d80, #ff6c08);
+}
+
+.imageMS{
+    background-image: linear-gradient(to top right, #8e8bbc, #36084a);
+}
+
+
+
+.title{
     font-weight: bold;
     text-shadow: 0px 1px 2px #282c34;
     color: #e6f0fb;
@@ -62,12 +83,11 @@
     margin: 2px;
 }
 
-.share {
-    padding: 10px;
-    font-size: 25px;
+.footer {
     display: flex;
     justify-content: space-evenly;
 }
+
 
 .uf {
     display: flex;

@@ -4,6 +4,13 @@
     grid-gap: 1em;
 }
 
+.info{
+    border: solid 1px #ffb500;
+    background: #f1ecb8;
+    color: #ce5121;
+    padding: 20px;
+}
+
 /* ##Extra Large */
 @media (min-width: 1200px) {
       .Corridas {

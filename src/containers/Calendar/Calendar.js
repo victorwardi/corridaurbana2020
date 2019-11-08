@@ -7,53 +7,51 @@ import Pagination from "../../components/pagination/Pagination";
 const Calendar = (props) => {
     let {uf} = useParams();
     let {page} = useParams();
-    if(page === undefined){
-        page = 1;
+    if (uf === undefined) {
+        uf = '';
     }
-    const url_base = '/calendario/' + uf;
-
+    if (page === undefined) {
+        page = '1';
+    }
 
     const [corridas, setCorridas] = useState([]);
     const [pagesTotal, setPagesTotal] = useState(0);
     const [isLoading, setIsLoading] = useState(false);
 
     useMemo(() => {
-        const cacheName = url_base + '/' + page;
+        const cacheName = 'calendario-' + uf + '-page-' + page;
+
         async function getCorridasEstado() {
-            console.log('REQUEST: https://www.corridaurbana.com.br/wp-json/calendario/estado/' + uf + '?page=' + page);
             setIsLoading(true);
-            const response = await axios('https://www.corridaurbana.com.br/wp-json/calendario/estado/' + uf + '?page=' + page);
+            const response = await axios('/calendario/' + uf + '?page=' + page);
             setCorridas(response.data.corridas);
             setPagesTotal(response.data.pages_total);
             sessionStorage.setItem(cacheName, JSON.stringify(response.data));
             setIsLoading(false);
         }
 
-      const cacheCalendario =   sessionStorage.getItem(cacheName);
-       if(cacheCalendario){
-           console.log('>>>>>>>>>>> leu as corridas do CACHE');
-           const json = JSON.parse(cacheCalendario);
-           setCorridas(json.corridas);
-           setPagesTotal(json.pages_total);
-       }else{
-           console.log('>>>>>>>>>>> leu as corridas do SERVER');
-           getCorridasEstado();
-       }
+        const cacheCalendario = sessionStorage.getItem(cacheName);
+        if (cacheCalendario) {
+            console.log('>>>>>>>>>>> leu as corridas do CACHE');
+            const json = JSON.parse(cacheCalendario);
+            setCorridas(json.corridas);
+            setPagesTotal(json.pages_total);
+        } else {
+            console.log('>>>>>>>>>>> leu as corridas do SERVER');
+            getCorridasEstado();
+        }
 
-    }, [url_base, uf, page]);
+    }, [uf, page]);
 
 
-const corridasList = useMemo(() => {
- console.log(corridas);
-    return <Corridas corridas={corridas} uf={uf}/>;
-}, [corridas, uf]);
+    const corridasList = useMemo(() => {
+        return <Corridas corridas={corridas} uf={uf}/>;
+    }, [corridas, uf]);
     return (
         <>
-
-                {isLoading ? <div className="loader m-auto"></div> : corridasList }
-
+            {isLoading ? <div className="loader"></div> : corridasList}
             <div>
-                <Pagination url={url_base} active={page} total={pagesTotal}/>
+                <Pagination url={'/calendario/' + (uf !== '' ? uf + '/' : '')} active={page} total={pagesTotal}/>
             </div>
         </>
     );

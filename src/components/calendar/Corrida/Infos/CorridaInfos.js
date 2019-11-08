@@ -4,9 +4,13 @@ import classes from './CorridaInfos.module.css';
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import Distances from "../Distances/Distances";
 import PropTypes from 'prop-types';
-import Layout from "../../../../containers/Layout";
 
 const CorridaInfos = (props) => {
+
+    const API_KEY = 'AIzaSyBWbx-asZFkX_6C4zhauBRvEc0CZUs6TnQ';
+     const place = props.corrida.endereco;
+
+    const map = 'https://maps.googleapis.com/maps/api/staticmap?center='+place+'&zoom=12&size=640x400&scale=2&maptype=roadmap&key=' + API_KEY;
     return (
         <div className={classes.CorridaInfos}>
             <Helmet>
@@ -40,23 +44,37 @@ const CorridaInfos = (props) => {
             `}</script>
             </Helmet>
 
-            <div className="titulo">
-               <h1>{props.corrida.titulo}</h1>
+            <div className={classes.title}>
+                <h1>{props.corrida.titulo}</h1>
             </div>
-            <div className="data">
-                {props.corrida.dia}/{props.corrida.mes}/{props.corrida.ano}
+            <div className={classes.place}>
+                <FontAwesomeIcon icon="globe-americas"/> {props.corrida.cidade} - {props.corrida.uf}
             </div>
-            <div className="local">
-                <FontAwesomeIcon icon="globe-americas"/>{props.corrida.endereco}
+            <div className={classes.date}>
+                <FontAwesomeIcon  icon={['far', 'calendar']}/>{props.corrida.dia}/{props.corrida.mes}/{props.corrida.ano}
             </div>
-            <div className="distances">
-                <Distances distances={props.distances}/>
+            <div className={classes.horario}>
+                <FontAwesomeIcon  icon={['far', 'clock']}/> {props.corrida.horario}
             </div>
-
-            <div className="share">
-                <FontAwesomeIcon icon={['fab', 'whatsapp']}/>
-                <FontAwesomeIcon icon={['fab', 'facebook']} className="mx-2"/>
-                <FontAwesomeIcon icon="envelope"/>
+            <div className={classes.place}>
+                <FontAwesomeIcon icon="globe-americas"/> {props.corrida.endereco}
+            </div>
+            <div className={classes.mapa}>
+                <img src={map} alt=""/>
+            </div>
+            <div className={classes.distances}>
+                <div><FontAwesomeIcon icon="globe-americas"/><b>Distâncias</b></div>
+                <Distances distances={props.corrida.distancias}/>
+            </div>
+            <div className={classes.footer}>
+                <div className={classes.share}>
+                    <FontAwesomeIcon icon={['fab', 'whatsapp']}/>
+                    <FontAwesomeIcon icon={['fab', 'facebook']} className="mx-2"/>
+                    <FontAwesomeIcon icon="envelope"/>
+                </div>
+                <div className={classes.link}>
+                    <a href={props.corrida.site}>Site oficial para inscrição</a>
+                </div>
             </div>
 
 
@@ -64,9 +82,6 @@ const CorridaInfos = (props) => {
     );
 };
 
-CorridaInfos.propTypes = {
-    corrida: PropTypes.object,
-    distances: PropTypes.array
-};
+
 
 export default CorridaInfos;

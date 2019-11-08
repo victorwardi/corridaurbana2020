@@ -2,13 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="016c1d2e-0cfa-4be2-aec3-ccc84fcee0ab" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/calendar/Corrida/Infos/CorridaInfos.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/calendar/Corrida/Infos/CorridaInfos.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/styles.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/calendar/Corrida/Corrida.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/calendar/Corrida/Corrida.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/calendar/Corrida/Corrida.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/calendar/Corrida/Corrida.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/calendar/Corrida/CorridaThumb/CorridaThumb.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/calendar/Corrida/CorridaThumb/CorridaThumb.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/calendar/Corrida/CorridaThumb/CorridaThumb.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/calendar/Corrida/CorridaThumb/CorridaThumb.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/calendar/Corrida/Distances/Distances.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/calendar/Corrida/Distances/Distances.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/calendar/Corrida/Infos/CorridaInfos.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/calendar/Corrida/Infos/CorridaInfos.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/calendar/Corrida/Infos/CorridaInfos.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/calendar/Corrida/Infos/CorridaInfos.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/calendar/Corridas/Corridas.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/calendar/Corridas/Corridas.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/calendar/Corridas/Corridas.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/calendar/Corridas/Corridas.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pagination/Pagination.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pagination/Pagination.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/search/Search.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/search/Search.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/search/Search.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/search/Search.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/Calendar/Calendar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Calendar/Calendar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/Layout.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Layout.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/Main/Main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Main/Main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -113,7 +127,8 @@
       <updated>1571840738503</updated>
       <workItem from="1571840742846" duration="6101000" />
       <workItem from="1571864026822" duration="27979000" />
-      <workItem from="1572041764697" duration="69263000" />
+      <workItem from="1572041764697" duration="78445000" />
+      <workItem from="1573208126373" duration="16486000" />
     </task>
     <task id="LOCAL-00001" summary="First Commit">
       <created>1571855376985</created>
@@ -136,7 +151,14 @@
       <option name="project" value="LOCAL" />
       <updated>1572909824347</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Corrida info page">
+      <created>1573086009387</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1573086009387</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -159,15 +181,15 @@
     <MESSAGE value="First Commit" />
     <MESSAGE value="Searching bar and filter" />
     <MESSAGE value="CSS GRID" />
-    <option name="LAST_COMMIT_MESSAGE" value="CSS GRID" />
+    <MESSAGE value="Corrida info page" />
+    <option name="LAST_COMMIT_MESSAGE" value="Corrida info page" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/components/calendar/Corrida/Corrida.js</url>
-          <line>52</line>
-          <properties lambdaOrdinal="-1" />
+          <line>49</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>
