@@ -7,30 +7,35 @@ import SEOtags from "../../../SeoMetas/SeoTags";
 
 const CorridaThumb = props => {
 
-    const ufImage = (uf) => {
-        let ufClass;
-
+    const getUfImage = (uf) => {
+        let colors;
         switch (uf.toString().toUpperCase()) {
             case 'RJ' :
-                console.log('>>>> RJ')
-                ufClass = classes.imageRJ;
+                colors = ['#1abc9c', '#005c5f'];
                 break;
             case 'SP' :
-                ufClass = classes.imageSP;
+                colors = ['#2ba3ff', '#15416a'];
                 break;
             case 'MG' :
-                ufClass = classes.imageMG;
+                colors = ['#ff64a2', '#cf1755'];
                 break;
             case 'BA' :
-                ufClass = classes.imageBA;
+                colors = ['#ff920b', '#ff4d00'];
                 break;
             case 'MS' :
-                ufClass = classes.imageMS;
+                colors = ['#8e8bbc', '#36084a'];
+                break;
+            case 'SC' :
+                colors = ['#66ff21', '#20380b'];
+                break;
+            case 'RS' :
+                colors = ['#fffaa6', '#ff920b'];
                 break;
             default :
-                ufClass = '';
+                colors = ['#adb7c2', '#3c4047'];
         }
-        return ufClass;
+        console.log(colors)
+        return 'linear-gradient(to top right, ' + colors[0] + ', ' + colors[1] + ' )';
     }
 
 
@@ -41,7 +46,7 @@ const CorridaThumb = props => {
                     pathname: '/corrida/' + props.corrida.slug,
                     state: {corrida: props.corrida}
                 }}>
-                    <div className={classes.image + ' ' + ufImage(props.corrida.uf)}>
+                    <div className={classes.image} style={{backgroundImage: getUfImage(props.corrida.uf)}}>
                         <div className={classes.title}>{props.corrida.titulo}</div>
                         <span className={classes.uf}>{props.corrida.uf}</span>
                     </div>

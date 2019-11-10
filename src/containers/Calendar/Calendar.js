@@ -5,25 +5,37 @@ import Corridas from "../../components/calendar/Corridas/Corridas";
 import Pagination from "../../components/pagination/Pagination";
 
 const Calendar = (props) => {
-    let {uf} = useParams();
-    let {page} = useParams();
-    if (uf === undefined) {
-        uf = '';
+
+
+    let {slug} = useParams();
+    let slugUF = '';
+    if (slug !== undefined) {
+        slugUF = slug;
     }
-    if (page === undefined) {
-        page = '1';
+
+    const getUF = (slug) => {
+        for (let i in props.ufs) {
+            if (props.ufs[i].slug === slug) {
+                return props.ufs[i];
+            }
+        }
     }
+
+    let uf = getUF(slugUF);
 
     const [corridas, setCorridas] = useState([]);
     const [pagesTotal, setPagesTotal] = useState(0);
     const [isLoading, setIsLoading] = useState(false);
+    let {page} = useParams();
+    if (page === undefined) {
+        page = '1';
+    }
 
     useMemo(() => {
-        const cacheName = 'calendario-' + uf + '-page-' + page;
-
+        const cacheName = 'calendario-' + uf.slug + '-page-' + page;
         async function getCorridasEstado() {
             setIsLoading(true);
-            const response = await axios('/calendario/' + uf + '?page=' + page);
+            const response = await axios('/calendario/' + uf.value + '?page=' + page);
             setCorridas(response.data.corridas);
             setPagesTotal(response.data.pages_total);
             sessionStorage.setItem(cacheName, JSON.stringify(response.data));
@@ -41,20 +53,22 @@ const Calendar = (props) => {
             getCorridasEstado();
         }
 
-    }, [uf, page]);
+    }, [
+        uf,
+        page]);
 
 
     const corridasList = useMemo(() => {
         return <Corridas corridas={corridas} uf={uf}/>;
-    }, [corridas, uf]);
-    return (
-        <>
+    }, [
+        corridas,
+        uf]);
+    return (<>
             {isLoading ? <div className="loader"></div> : corridasList}
             <div>
-                <Pagination url={'/calendario/' + (uf !== '' ? uf + '/' : '')} active={page} total={pagesTotal}/>
+                <Pagination url={'/calendario/' + (uf.slug !== '' ? uf.slug + '/' : '')} active={page} total={pagesTotal}/>
             </div>
-        </>
-    );
+        </>);
 };
 
 export default Calendar;

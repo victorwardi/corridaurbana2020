@@ -12,10 +12,10 @@ const Corridas = props => {
         return (
             <>
                 <Helmet>
-                    <title>{'Corrida Urbana - Calendário de Corridas de Rua do ' + props.uf + '.'}</title>
+                    <title>{'Corrida Urbana - Calendário de Corridas de Rua do ' + props.uf.label + '.'}</title>
                     <meta name="description"
-                          content={'Confira o calendário de corridas do ' + props.uf + '.'}/>
-                    <link rel="canonical" href={'/calendario/' + props.uf}/>
+                          content={'Confira o calendário de corridas do ' + props.uf.label + '.'}/>
+                    <link rel="canonical" href={'/calendario/' + props.uf.slug}/>
                 </Helmet>
 
                 { corridasList.length === 0 ? (<div className={classes.info}>Nenhuma corrida encontrada!</div>)

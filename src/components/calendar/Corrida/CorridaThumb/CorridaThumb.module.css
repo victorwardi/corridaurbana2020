@@ -24,28 +24,6 @@
     justify-content: space-between;
 }
 
-.imageRJ{
-    background-image: linear-gradient(to top right, #1abc9c, #005c5f);
-}
-
-.imageSP{
-    background-image: linear-gradient(to top right, #2ba3ff, #15416a);
-}
-
-.imageMG{
-     background-image: linear-gradient(to top right, #ff64a2, #cf1755);
-}
-
-.imageBA{
-    background-image: linear-gradient(to top right, #ff8d80, #ff6c08);
-}
-
-.imageMS{
-    background-image: linear-gradient(to top right, #8e8bbc, #36084a);
-}
-
-
-
 .title{
     font-weight: bold;
     text-shadow: 0px 1px 2px #282c34;
