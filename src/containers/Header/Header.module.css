@@ -1,7 +1,36 @@
 .Header {
-    padding: 60px;
-    text-align: center;
-    background: #1abc9c;
-    color: white;
+    display: flex;
+    justify-content: center;
+    background-image: linear-gradient( rgba(0, 0, 0, 0.4),  rgba(0, 0, 0, 0.4)), url("../../../src/assets/images/running.jpg");
+    background-position-x: center;
+    background-position-y: center;
+    background-size: cover;
+    background-repeat: no-repeat;
     grid-area: Header;
+    flex-wrap: wrap;
+
+}
+
+.headerBase{
+    content: "";
+    background-image: url("../../../src/assets/images/base.svg");
+    background-position-y: bottom;
+    background-repeat: no-repeat;
+    background-size: 105%;
+    align-self: flex-end;
+    width: 105%;
+    height: 100px;
+    margin-left: -5px;
+    margin-bottom: -2px;
+
+}
+.logo {
+    align-self: center;
+    max-width: 600px;
+
+}
+
+.logo img {
+    width: 90%;
+
 }

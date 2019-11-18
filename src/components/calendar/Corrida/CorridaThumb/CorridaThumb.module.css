@@ -3,7 +3,7 @@
     color: #272b33;
     text-align: left;
     font-size: 18px;
-    min-height: 250px;
+    min-height: 200px;
     border-radius: 10px;
     display: grid;
     grid-auto-rows: minmax(20px, auto);
@@ -11,38 +11,46 @@
 }
 
 .corrida:hover {
+    border-radius: 10px;
     box-shadow: 5px 5px 5px #cfcfcf;
     cursor: pointer;
 }
 
 .image {
-    width: 100%;
-    min-height: 125px;
-    background-image: linear-gradient(to top right, #adb7c2, #3c4047);
-    padding: 15px;
     display: flex;
     justify-content: space-between;
+    width: 100%;
+    min-height: 120px;
+    padding: 5px;
+    background: #f8f8f8;
+
 }
 
 .title{
     font-weight: bold;
-    text-shadow: 0px 1px 2px #282c34;
-    color: #e6f0fb;
-    align-self: flex-end;
+    color: #27292d;
+    align-self: center;
+    padding: 5px;
+}
+.date{
+    display: flex;
+    flex-flow: column;
+    padding: 5px;
 }
 
-.date {
-    padding: 10px;
-    color: #10b59d;
-    font-size: 14px;
+.date > span{
     font-weight: bold;
-
+    align-self: center;
 }
 
+.dia{ font-size: 28px;}
+.mes{font-size: 14px;}
+.ano{ font-size: 14px;}
 
 .place {
-    font-size: 12px;
+    font-size: 16px;
     padding: 10px;
+    text-align: center;
 }
 
 .distances {
@@ -50,12 +58,12 @@
     display: flex;
     flex-direction: row;
     justify-content: left;
-    padding: 5px;
+    padding: 10px;
 }
 
 .distances span {
     border-radius: 5px;
-    background-color: #10b59d;
+    background-color: #a0a2a3;
     color: white;
     padding: 5px;
     margin: 2px;
@@ -64,6 +72,7 @@
 .footer {
     display: flex;
     justify-content: space-evenly;
+    padding: 10px;
 }
 
 
@@ -79,4 +88,45 @@
     border-radius: 20px;
     padding: 15px;
     font-weight: bold;
+}
+
+.flag {
+    width: 32px;
+    height:40px;
+display: block;
+    padding-top: 8px;
+    margin-top: -18px;
+    margin-bottom: 10px;
+    position: relative;
+    background: #73c1b0;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+}
+.flag:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-bottom: 13px solid #ffffff;
+    border-left: 16px solid transparent;
+    border-right: 16px solid transparent;
+}
+
+.info{
+    padding: 5px;
+    font-size: 14px;
+    border: solid 1px #1abc9c;
+    color: #1abc9c;
+    align-self: center;
+}
+
+
+.corrida:hover .info{
+    background: #1abc9c;
+    color: #ffffff;
 }

@@ -2,15 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="016c1d2e-0cfa-4be2-aec3-ccc84fcee0ab" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/calendar/Corrida/CorridaThumb/ufs.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/logo-corrida-urbana-horizontal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/running.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/readMoreButton/ReadMoreButtom.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/readMoreButton/ReadMoreButton.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/styles.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/calendar/Corrida/CorridaThumb/CorridaThumb.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/calendar/Corrida/CorridaThumb/CorridaThumb.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/calendar/Corrida/CorridaThumb/CorridaThumb.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/calendar/Corrida/CorridaThumb/CorridaThumb.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/calendar/Corrida/CorridaThumb/ufs.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/calendar/Corridas/Corridas.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/calendar/Corridas/Corridas.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pagination/Pagination.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pagination/Pagination.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/search/Search.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/search/Search.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/containers/Calendar/Calendar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Calendar/Calendar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/Header/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Header/Header.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/Header/Header.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Header/Header.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/containers/Main/Main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Main/Main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/Main/Main.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Main/Main.module.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -22,6 +33,12 @@
     <execution>
       <executable />
     </execution>
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="corridaurbana2020" />
+    <favorites_list name="images">
+      <favorite_root url="file://$PROJECT_DIR$/../../../Temp/flags/rj.JPG" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+    </favorites_list>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -63,17 +80,17 @@
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\IntelliJ IDEA 2018.3\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Victor\Dev\React\corridaurbana2020\src\assets\images" />
-      <recent name="C:\Victor\Dev\React\corridaurbana2020\src\components\calendar\Events\Event" />
-      <recent name="C:\Victor\Dev\React\corridaurbana2020\src\components\layout\header" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Victor\Dev\React\corridaurbana2020\src\containers" />
       <recent name="C:\Victor\Dev\React\corridaurbana2020\src\containers\Calendar" />
       <recent name="C:\Victor\Dev\React\corridaurbana2020\src\container" />
       <recent name="C:\Victor\Dev\React\corridaurbana2020\src\components\calendar" />
       <recent name="C:\Victor\Dev\React\corridaurbana2020\src\components\layout\footer" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Victor\Dev\React\corridaurbana2020\src\assets\images" />
+      <recent name="C:\Victor\Dev\React\corridaurbana2020\src\components\calendar\Events\Event" />
+      <recent name="C:\Victor\Dev\React\corridaurbana2020\src\components\layout\header" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -131,7 +148,10 @@
       <workItem from="1571840742846" duration="6101000" />
       <workItem from="1571864026822" duration="27979000" />
       <workItem from="1572041764697" duration="78445000" />
-      <workItem from="1573208126373" duration="24934000" />
+      <workItem from="1573208126373" duration="30402000" />
+      <workItem from="1573485951486" duration="6652000" />
+      <workItem from="1573502441658" duration="16721000" />
+      <workItem from="1573748246448" duration="16219000" />
     </task>
     <task id="LOCAL-00001" summary="First Commit">
       <created>1571855376985</created>
@@ -168,7 +188,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573256680646</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Changed UF param from value to slug.">
+      <created>1573392516260</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1573392516260</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -193,7 +220,8 @@
     <MESSAGE value="CSS GRID" />
     <MESSAGE value="Corrida info page" />
     <MESSAGE value="CSS and new API consumer" />
-    <option name="LAST_COMMIT_MESSAGE" value="CSS and new API consumer" />
+    <MESSAGE value="Changed UF param from value to slug." />
+    <option name="LAST_COMMIT_MESSAGE" value="Changed UF param from value to slug." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

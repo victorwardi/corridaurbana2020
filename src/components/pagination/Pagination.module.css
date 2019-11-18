@@ -7,8 +7,8 @@
     list-style: none;
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    align-content: space-around;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
 }
 
 .Pagination li {
@@ -19,5 +19,5 @@
 }
 
 .Pagination .active{
-    background-color: #ce5121;
+    background-color: #ce0059;
 }
