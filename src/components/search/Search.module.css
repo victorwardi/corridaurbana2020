@@ -1,83 +1,26 @@
-.Search{
+.container{
     display: flex;
-    flex-flow: row wrap;
-}
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-bottom: 20px;
 
-.Search > div {
-    flex: 100% ;
-    margin-top: 5px;
 }
-
-.Search input[type="text"]{
-    font-size: 20px;
+.container > div{
     width: 100%;
-    padding: 10px 10px;
-    outline: 0;
-    border: 0;
-    border-bottom: solid 2px #272b33;
-    background: #f1f1f1;
-    color: #7b7b7b;
-    appearance: none;
-
+    padding: 0px 10px;
 }
 
-.uf .label{
- font-size: 2rem;
+.selectSize{
+    width: 100% !important;
+    margin-top: 16px !important;
+    margin-bottom: 8px !important;
 }
 
-/* Reset Select */
-.Search select {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    -ms-appearance: none;
-    appearance: none;
-    outline: 0;
-    box-shadow: none;
-    border: 0 !important;
-    background: #f1f1f1 none;
+.calendar > div{
+    width: 100% !important;
+    margin-top: 16px !important;
+    margin-bottom: 8px !important;
 }
-/* Remove IE arrow */
-.Search select::-ms-expand {
-    display: none;
-}
-/* Custom Select */
-.select {
-    position: relative;
-    display: flex;
-    /*width: 20em;*/
-    height: 3em;
-    line-height: 3;
-    background: #cfcfcf;
-    overflow: hidden;
-    border-radius: .25em;
-    border-bottom: solid 2px #272b33;
-}
-.Search select {
-    font-size: 20px;
-    flex: 1;
-    padding: 0 .5em;
-    cursor: pointer;
-
-}
-/* Arrow */
-.select::after {
-    content: '\25BC';
-    position: absolute;
-    top: 0;
-    right: 0;
-    padding: 0 1em;
-    background: #f1f1f1;
-    cursor: pointer;
-    pointer-events: none;
-    -webkit-transition: .25s all ease;
-    -o-transition: .25s all ease;
-    transition: .25s all ease;
-}
-/* Transition */
-.select:hover::after {
-    color: #f39c12;
-}
-
 
 .submit{
     width: 100%;
@@ -85,6 +28,8 @@
     color: #ffffff;
     padding: 10px 10px;
     border: 1px solid #d6e0eb;
+    margin-top: 16px !important;
+    margin-bottom: 8px !important;
 }
 
 .submit:hover{
@@ -96,22 +41,10 @@
 /* ##Extra Large */
 @media (min-width: 768px) {
 
-    .Search > div {
-        flex: auto;
-        margin: 1rem;
+    .container > div{
+        width: 25%;
     }
 
-    .Search input[type="text"]{
 
-
-    }
-
-    .submit{
-        background: #10b59d;
-        color: #ffffff;
-        padding: 10px 10px;
-        margin: 10px auto ;
-        border: 1px solid #d6e0eb;
-    }
 }
 

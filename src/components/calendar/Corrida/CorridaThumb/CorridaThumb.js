@@ -57,30 +57,28 @@ const CorridaThumb = props => {
 
 
     return (<>
-        <div className={classes.corrida}>
+        <div className={classes.corrida} style={{borderColor: getUfImage(props.corrida.uf)}}>
             <Link to={{
                 pathname: '/corrida/' + props.corrida.slug, state: {corrida: props.corrida}
             }}>
-                <div className={classes.image}>
-                    <div>
-                        <div className={classes.flag}
-                             style={{background: getUfImage(props.corrida.uf)}}>{props.corrida.uf}</div>
-                        <div className={classes.title}>{props.corrida.titulo}</div>
 
-                    </div>
                     <div className={classes.date}>
                         <span className={classes.dia}>{props.corrida.dia}</span>
                         <span className={classes.mes}>{props.corrida.mesExtenso.substr(0, 3).toUpperCase()}</span>
                         <span className={classes.ano}>{props.corrida.ano}</span>
                     </div>
-                </div>
-                <div className={classes.place}>
-                    <FontAwesomeIcon icon="globe-americas"/>{props.corrida.cidade} - {props.corrida.uf}
-                </div>
-                <div className={classes.footer}>
-                    <div className={classes.info}>+ MAIS INFORMAÇÕES</div>
-                </div>
+                    <div className={classes.info}>
+                        {/*<div className={classes.flag} style={{background: getUfImage(props.corrida.uf)}}>{props.corrida.uf}</div>*/}
+                        <div className={classes.title}>{props.corrida.titulo}</div>
+                        <div className={classes.place}>
+                            <FontAwesomeIcon icon="globe-americas"/>{props.corrida.cidade} - {props.corrida.uf}
+                        </div>
+                    </div>
 
+
+                {/*<div className={classes.footer}>*/}
+                {/*    <div className={classes.info}>+ MAIS INFORMAÇÕES</div>*/}
+                {/*</div>*/}
             </Link>
             <SEOtags corrida={props.corrida}/>
         </div>

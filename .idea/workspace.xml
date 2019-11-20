@@ -2,26 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="016c1d2e-0cfa-4be2-aec3-ccc84fcee0ab" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/assets/images/logo-corrida-urbana-horizontal.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/running.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/readMoreButton/ReadMoreButtom.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/readMoreButton/ReadMoreButton.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/assets/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/styles.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/calendar/Corrida/CorridaThumb/CorridaThumb.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/calendar/Corrida/CorridaThumb/CorridaThumb.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/calendar/Corrida/CorridaThumb/CorridaThumb.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/calendar/Corrida/CorridaThumb/CorridaThumb.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/calendar/Corrida/CorridaThumb/ufs.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/calendar/Corridas/Corridas.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/calendar/Corridas/Corridas.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/pagination/Pagination.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pagination/Pagination.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/calendar/Corridas/Corridas.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/calendar/Corridas/Corridas.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/search/Search.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/search/Search.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/Calendar/Calendar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Calendar/Calendar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/search/Search.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/search/Search.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/containers/Header/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Header/Header.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/containers/Header/Header.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Header/Header.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/Main/Main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Main/Main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/containers/Main/Main.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Main/Main.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/Menu/Nav.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Menu/Nav.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -151,7 +144,7 @@
       <workItem from="1573208126373" duration="30402000" />
       <workItem from="1573485951486" duration="6652000" />
       <workItem from="1573502441658" duration="16721000" />
-      <workItem from="1573748246448" duration="16219000" />
+      <workItem from="1573748246448" duration="33674000" />
     </task>
     <task id="LOCAL-00001" summary="First Commit">
       <created>1571855376985</created>
@@ -195,7 +188,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573392516260</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="new header">
+      <created>1574097128390</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1574097128390</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -221,7 +221,8 @@
     <MESSAGE value="Corrida info page" />
     <MESSAGE value="CSS and new API consumer" />
     <MESSAGE value="Changed UF param from value to slug." />
-    <option name="LAST_COMMIT_MESSAGE" value="Changed UF param from value to slug." />
+    <MESSAGE value="new header" />
+    <option name="LAST_COMMIT_MESSAGE" value="new header" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -230,6 +231,12 @@
           <url>file://$PROJECT_DIR$/src/components/calendar/Corrida/Corrida.js</url>
           <line>49</line>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/components/search/Search.js</url>
+          <line>47</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

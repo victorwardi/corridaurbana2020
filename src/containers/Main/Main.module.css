@@ -3,6 +3,8 @@
     grid-area: Main;
     padding: 20px;
     max-width: 1400px;
+    width: 100%;
     justify-self: center;
+    min-height: 500px;
 
 }

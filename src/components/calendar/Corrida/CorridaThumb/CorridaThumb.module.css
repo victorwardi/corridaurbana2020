@@ -1,44 +1,48 @@
+
+.corrida{
+    border-left: 5px solid #999999;
+    animation: showup .6s ease-out;
+
+}
+
 .corrida a {
     background-color: #ffffff;
-    color: #272b33;
-    text-align: left;
+    color: #535353;
     font-size: 18px;
-    min-height: 200px;
-    border-radius: 10px;
-    display: grid;
-    grid-auto-rows: minmax(20px, auto);
-    grid-gap: 0.1em;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    display: flex;
+    min-height: 100px;
+
 }
 
 .corrida:hover {
-    border-radius: 10px;
     box-shadow: 5px 5px 5px #cfcfcf;
     cursor: pointer;
 }
 
-.image {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    min-height: 120px;
-    padding: 5px;
-    background: #f8f8f8;
-
-}
 
 .title{
     font-weight: bold;
     color: #27292d;
-    align-self: center;
-    padding: 5px;
-}
-.date{
-    display: flex;
-    flex-flow: column;
     padding: 5px;
 }
 
+.place {
+    font-size: 14px;
+    padding: 5px;
+
+}
+.date{
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+    padding: 10px 15px;
+    border-right: 1px solid #f1f1f1;
+}
+
 .date > span{
+
     font-weight: bold;
     align-self: center;
 }
@@ -47,11 +51,7 @@
 .mes{font-size: 14px;}
 .ano{ font-size: 14px;}
 
-.place {
-    font-size: 16px;
-    padding: 10px;
-    text-align: center;
-}
+
 
 .distances {
     font-size: 10px;
@@ -118,15 +118,25 @@ display: block;
 }
 
 .info{
-    padding: 5px;
-    font-size: 14px;
-    border: solid 1px #1abc9c;
-    color: #1abc9c;
-    align-self: center;
+    padding-left: 10px;
+    padding-top: 10px;
+
 }
 
 
-.corrida:hover .info{
-    background: #1abc9c;
-    color: #ffffff;
+@keyframes showup {
+    0% {
+        opacity: 0;
+        margin-top: 40px
+    }
+
+    50% {
+        opacity: 0;
+        margin-top: 40px
+    }
+
+    100% {
+        opacity: 1;
+        margin-top: 0
+    }
 }
