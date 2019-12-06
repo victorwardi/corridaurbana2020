@@ -35,20 +35,15 @@ a {
 }
 /* ----------------- Loader And Animations ----------------- */
 
-.loader {
-    border: 4px solid #f1f1f1; /* Light grey */
-    border-top: 4px solid #10b59d; /* Blue */
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    animation: spin 2s linear infinite;
-    margin: auto;
+
+.error-msg{
+    border: solid 1px #650208;
+    background: #f1c1d9;
+    color: #650208;
+    padding: 20px;
+    text-align: center;
 }
 
-@keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-}
 
 .item-enter {
     opacity: 0;

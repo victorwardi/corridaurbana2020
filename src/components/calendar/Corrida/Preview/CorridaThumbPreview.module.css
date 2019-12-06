@@ -1,0 +1,20 @@
+.corrida {
+    border-left: 5px solid #999999;
+    background-color: #ffffff;
+    color: #535353;
+    font-size: 18px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    display: flex;
+    min-height: 100px;
+    animation: loading 2s infinite;
+
+}
+
+
+/* Standard syntax */
+@keyframes loading {
+    0%   {background-color: #e3e3e3;}
+    50%   {background-color: #c1c1c1;}
+    100% {background-color: #e3e3e3;}
+}

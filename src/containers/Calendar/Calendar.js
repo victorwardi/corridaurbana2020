@@ -1,236 +1,195 @@
-import React, {useEffect, useState, useMemo} from 'react';
+import React, {useEffect, useState, useCallback} from 'react';
 import axios from "axios";
-import {useHistory, useParams} from "react-router";
 import Corridas from "../../components/calendar/Corridas/Corridas";
-import Search from "../../components/search/Search";
 import ReadMore from "../../components/readMoreButton/ReadMoreButton";
+import {getUfs, getUfBySlug} from '../../assets/ufs';
+import {useHistory, useLocation, useParams} from "react-router";
+import Search from "../../components/search/Search";
+import {Helmet} from "react-helmet";
+import queryString from 'query-string';
+import Loader from "../../components/ui/loader/Loader";
 
-const Calendar = (props) => {
+const Calendar = () => {
+    console.log('CALANDAR!')
+    const CORRIDAS_PER_REQUEST = 15;
 
-    const ufs = [
-        {
-            label: "Todos", value: "todos", slug: "br"
-        },
-        {
-            label: "Acre", value: "AC", slug: "acre"
-        },
-        {
-            label: "Alagoas", value: "AL", slug: "alagoas"
-        },
-        {
-            label: "Amapá", value: "AP", slug: "amapa"
-        },
-        {
-            label: "Amazonas", value: "AM", slug: "amazonas"
-        },
-        {
-            label: "Bahia", value: "BA", slug: "bahia"
-        },
-        {
-            label: "Ceará", value: "CE", slug: "ceara"
-        },
-        {
-            label: "Distrito Federal", value: "DF", slug: "distrito-federal"
-        },
-        {
-            label: "Espírito Santo", value: "ES", slug: "espirito-santo"
-        },
-        {
-            label: "Goiás", value: "GO", slug: "goias"
-        },
-        {
-            label: "Maranhão", value: "MA", slug: "maranhao"
-        },
-        {
-            label: "Mato Grosso", value: "MT", slug: "mato-grosso"
-        },
-        {
-            label: "Mato Grosso do Sul", value: "MS", slug: "mato-grosso-do-sul"
-        },
-        {
-            label: "Minas Gerais", value: "MG", slug: "minas-gerais"
-        },
-        {
-            label: "Paraná", value: "PR", slug: "parana"
-        },
-        {
-            label: "Paraíba", value: "PB", slug: "paraiba"
-        },
-        {
-            label: "Paraná", value: "PA", slug: "parana"
-        },
-        {
-            label: "Pernambuco", value: "PE", slug: "pernambuco"
-        },
-        {
-            label: "Piauí", value: "PI", slug: "piaui"
-        },
-        {
-            label: "Rio Grande do Norte", value: "RN", slug: "rio -grande-do-norte"
-        },
-        {
-            label: "Rio Grande do Sul", value: "RS", slug: "rio-grande-do-sul"
-        },
-        {
-            label: "Rio de Janeiro", value: "RJ", slug: "rio-de-janeiro"
-        },
-        {
-            label: "Rondânia", value: "RO", slug: "rondonia"
-        },
-        {
-            label: "Roraima", value: "RR", slug: "roraima"
-        },
-        {
-            label: "Santa Catarina", value: "SC", slug: "santa-catarina"
-        },
-        {
-            label: "Sergipe", value: "SE", slug: "sergipe"
-        },
-        {
-            label: "São Paulo", value: "SP", slug: "sao-paulo"
-        },
-        {
-            label: "Tocantins", value: "TO", slug: "tocantins"
-        }];
+    let {ufParam} = useParams();
+    const location = useLocation();
+    const ufs = getUfs();
 
-    let {slug} = useParams();
-    slug = slug === undefined ? 'br' : slug;
-    let {page} = useParams();
-    page = page === undefined ? '1' : page;
+    console.log("UF:")
+    console.log(getUfBySlug(ufParam));
 
-
-    const [pageMore, setPageMore] = useState(2);
-    const [uf, setUf] = useState(ufs.filter(uf => uf.slug === slug)[0]);
-    console.log('CALENDAR - ' + uf.label.toString().toUpperCase())
+    const [uf, setUf] = useState( getUfBySlug(ufParam));
     const [corridas, setCorridas] = useState([]);
     const [pagesTotal, setPagesTotal] = useState(1);
     const [isLoading, setIsLoading] = useState(false);
-    const [isLoadingMore, setIsLoadingMore] = useState(false);
+    const [hasMoreToRead, setHasMoreToRead] = useState(true);
+    const [erro, setErro] = useState();
+    let history = useHistory();
 
-    function loadCorridas() {
-        const cacheName = 'calendario-' + uf.slug + '-page-' + page;
+    const paramsUrl = queryString.parse(location.search);
+    const searchURLparam = paramsUrl.search !== undefined ? paramsUrl.search : '';
+    console.log('SEARCH: ' + searchURLparam);
 
+    const [filters, setFilters] = useState({
+        estado: uf.value,
+        search: searchURLparam,
+        since: new Date().getTime(),
+        perpage: CORRIDAS_PER_REQUEST,
+        page : 1
+    });
+
+
+    useEffect(() => {
+        console.log("UF CARREGADA!: " + uf.slug);
+        loadCorridas(filters);
+    }, [
+        uf]);
+
+
+
+
+    const loadCorridas = (filtersCorridas) => {
+
+        console.log('LOADING.....');
+        setIsLoading(true);
+        setErro(false);
+
+        const cacheName = 'calendario-' + getFiltersQueryString(filtersCorridas);
         const cacheCalendario = sessionStorage.getItem(cacheName);
 
         if (cacheCalendario) {
-            console.log('CACHE');
-            const json = JSON.parse(cacheCalendario);
-            setCorridas(json.corridas);
-            setPagesTotal(json.pages_total);
+
+            async function getCorridasCache() {
+                console.log('LOADING FROM CACHE');
+                const json = JSON.parse(cacheCalendario);
+                const corridasConcatened = corridas.concat(json.corridas);
+                setCorridas(corridasConcatened);
+                console.log('TOTAL PAGES CACHE: ' + json.pages_total);
+                showMoreHandler(filtersCorridas, json.pages_total);
+                setIsLoading(false);
+            }
+
+            getCorridasCache().catch(error => {
+                setErro(true);
+                console.log("DEU  MERDA NO CACHE: " + error.message)
+            });
 
         } else {
-            console.log('SERVER');
+
+            console.log('LOADING FROM SERVER : ' + '/calendario' + getFiltersQueryString(filtersCorridas) );
 
             async function getCorridasEstado() {
-                setIsLoading(true);
-                const response = await axios('/calendario/' + uf.value + '?page=' + page);
-                setCorridas(response.data.corridas);
-                setPagesTotal(response.data.pages_total);
-                sessionStorage.setItem(cacheName, JSON.stringify(response.data));
+
+                const response = await axios('/calendario' + getFiltersQueryString(filtersCorridas));
+
+                if(response.data.corridas){
+                    const corridasConcatened = corridas.concat(response.data.corridas);
+                    setCorridas(corridasConcatened);
+                    showMoreHandler(filtersCorridas, response.data.pages_total);
+                    sessionStorage.setItem(cacheName, JSON.stringify(response.data));
+                }
                 setIsLoading(false);
 
             }
 
             getCorridasEstado().catch(error => {
-                console.log(error);
+                setIsLoading(false);
+                setErro(error.message);
+                console.log("DEU  MERDA NO SERVER: " + error.message)
             });
 
         }
+
+
+    };
+
+
+    const showMoreHandler = (filtersSearch, totalPage) =>{
+
+         if(filtersSearch.page >= totalPage){
+            setHasMoreToRead(false);
+        }
+        filtersSearch.page = filtersSearch.page + 1;
+
+
+         const estadoURL =  ufs.filter(uf => uf.value === filtersSearch.estado)[0].slug;
+         const searchURL = filtersSearch.search !== '' ?  '?search=' + filtersSearch.search : '';
+         history.push('/calendario/' +  estadoURL +  searchURL);
+
+
+        setFilters(filtersSearch)
+        setPagesTotal(totalPage);
     }
 
-    useEffect(() => {
+    const onSearchSubmit = (event) => {
 
-        loadCorridas();
+        event.preventDefault();
 
-    }, [
-        uf,
-        page]);
+        async function getCorridasSearch(filtersSearch) {
 
+            console.log('filtersSearch');
+            console.log( getFiltersQueryString(filtersSearch));
 
-    const corridasList = useMemo(() => {
-        console.log("LISTA CORRIDAS");
-        return <Corridas corridas={corridas} uf={uf}/>;
-    }, [
-        corridas,
-        uf]);
+            const urlSearch = '/calendario' +  getFiltersQueryString(filtersSearch);
 
-    let history = useHistory();
-    const ufChangeHandler = (event) => {
-        const ufSelectedCombo = ufs.filter(uf => uf.value === event.target.value)[0];
-        console.log('/calendario/' + ufSelectedCombo.slug);
-        setUf(ufSelectedCombo);
-        history.push('/calendario/' + ufSelectedCombo.slug);
-    }
+            console.log( 'BUSCANDO POR: ' + urlSearch);
 
-    function readMore() {
-        console.log('READ MORE CLICKED!');
-        console.log(uf);
-
-        const cacheName = 'calendario-' + uf.slug + '-page-' + pageMore;
-        console.log('CACHE NAME: ' + cacheName);
-        const cacheCalendario = sessionStorage.getItem(cacheName);
-
-        if (cacheCalendario) {
-            setIsLoadingMore(true);
-            console.log('CACHE');
-            const json = JSON.parse(cacheCalendario);
-            console.log(json);
-            const moreCorridas = json.corridas;
-            console.log('Carregando mais corridas: ' + moreCorridas.length)
-            console.log(moreCorridas);
-
-            const listCorridas = corridas;
-            console.log('lista original: ' + listCorridas.length);
-            console.log(listCorridas);
-
-            const listaConcat = listCorridas.concat(moreCorridas);
-            console.log('lista CONCAT: ' + listaConcat.length);
-            console.log(listaConcat);
-
-            setCorridas(listaConcat);
-            setPagesTotal(json.pages_total);
-            setPageMore(pageMore + 1);
-
-            setIsLoadingMore(false);
-        } else {
-            console.log('SERVER');
-
-            async function getCorridasEstado() {
-                setIsLoadingMore(true);
-                const response = await axios('/calendario/' + uf.value + '?page=' + pageMore);
-                const moreCorridas = response.data.corridas;
-                console.log('Carregando mais corridas: ' + moreCorridas.length)
-                console.log(moreCorridas);
-
-                const listCorridas = corridas;
-                console.log('lista original: ' + listCorridas.length);
-                console.log(listCorridas);
-
-                const listaConcat = listCorridas.concat(moreCorridas);
-                console.log('lista CONCAT: ' + listaConcat.length);
-                console.log(listaConcat);
-
-                setCorridas(listaConcat);
-                sessionStorage.setItem(cacheName, JSON.stringify(response.data));
-                setIsLoadingMore(false);
-                setPageMore(pageMore + 1);
+            const response = await axios(urlSearch);
+            console.log( response.data)
+            if(response.data.corridas){
+                setCorridas(response.data.corridas);
+                showMoreHandler(filtersSearch, response.data.pages_total);
             }
 
-            getCorridasEstado().catch(error => {
-                console.log(error);
-            });
+            setIsLoading(false);
 
         }
 
+        setIsLoading(true);
+        setHasMoreToRead(true);
+
+        const filtersSearch = {
+            'search': event.target.search.value,
+            'estado': event.target.estado.value,
+            'since': event.target.since.value,
+            'perpage': CORRIDAS_PER_REQUEST,
+            'page' : 1
+        };
+
+        getCorridasSearch(filtersSearch).catch(error => {
+            setIsLoading(false);
+            setErro(error.message);
+            console.log("DEU  MERDA NO SERVER: " + error.message)
+        });
+    }
+
+
+
+
+    const getFiltersQueryString = (filters) => {
+        return  '?' + Object.keys(filters).filter( key => filters[key] != '').map(key => key + '=' + filters[key]).join('&') ;
     }
 
     return (<>
-        <Search ufs={ufs} selectedUF={uf} ufChangeHandler={ufChangeHandler}/>
-        {isLoading ? <div className="loader"></div> : corridasList}
-        <div>
-            {(pagesTotal > 1 && page < pagesTotal) ? <ReadMore onClick={readMore} isLoading={isLoadingMore}/> : ''}
 
-        </div>
+        <Helmet>
+            <title>{'Corrida Urbana - Calendário de Corridas de Rua do ' + uf.label + '.'}</title>
+            <meta name="description"
+                  content={'Confira o calendário de corridas do ' + uf.label + '.'}/>
+            <link rel="canonical" href={'/calendario/' + uf.slug}/>
+        </Helmet>
+        <Search ufs={ufs} selectedUF={uf} search={searchURLparam} onSearchSubmit={onSearchSubmit}/>
+
+        <Loader show={isLoading}/>
+        {(isLoading && filters.page  == 1) ? '' : (erro ?
+         <div className="error-msg">DESCULPE! NÃO FOI POSSÍVEL RECUPERAR AS CORRIDAS.</div> :
+            <>
+            <Corridas corridas={corridas} uf={uf}/>
+                {hasMoreToRead && <ReadMore page={filters.page} pageTotal={pagesTotal} onClick={() => loadCorridas(filters)}/>}
+            </>
+                )}
     </>);
 };
 

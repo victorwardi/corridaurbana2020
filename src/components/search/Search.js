@@ -9,41 +9,49 @@ import Select from "@material-ui/core/Select";
 import InputLabel from "@material-ui/core/InputLabel";
 import FormControl from "@material-ui/core/FormControl";
 import TextField from "@material-ui/core/TextField";
-import Nav from "../../containers/Menu/Nav";
+
 
 const Search = (props) => {
 
     const [startDate, setStartDate] = useState(new Date());
+    const [ufSelected, setUfSelected] = useState(props.selectedUF.value);
 
+    const selectHandler = (event)=>{
+        setUfSelected(event.target.value);
+    }
 
     return (
 
-        <form noValidate autoComplete="off">
+        <form noValidate autoComplete="off"  onSubmit={props.onSearchSubmit}>
             <div className={classes.container}>
                 <div className={classes.textField}>
                     <TextField
+                        name="search"
                         fullWidth={true}
-                        id="standard-basic"
+                        id="search"
                         label="Corrida ou local"
                         margin="normal"
+                        value={props.search}
                     />
                 </div>
                 <div className={classes.select}>
                      <FormControl className={classes.selectSize}>
-                        <InputLabel id="demo-simple-select-label">Estado</InputLabel>
+                        <InputLabel id="ufSelectLabel">Estado</InputLabel>
                         <Select
-                            labelId="demo-simple-select-label"
-                            id="demo-simple-select"
-                            value={props.selectedUF.value}
-                            onChange={props.ufChangeHandler}
+                            labelId="ufSelectLabel"
+                            id="ufSelect"
+                            value={ufSelected}
+                            onChange={selectHandler}
                         >
-                            {props.ufs.map((uf, i) =><MenuItem value={uf.value}>{uf.label}</MenuItem>)}
+                            {props.ufs.map((uf, i) =><MenuItem key={i} value={uf.value}>{uf.label}</MenuItem>)}
                         </Select>
+                         <input type="hidden" name="estado" value={ufSelected}/>
                     </FormControl>
                 </div>
                 <div className={classes.calendar}>
                     <MuiPickersUtilsProvider utils={DateFnsUtils} locale={ptBR} >
                         <DatePicker
+
                             autoOk
                             disableToolbar
                             variant="inline"
@@ -54,8 +62,9 @@ const Search = (props) => {
                         />
 
                     </MuiPickersUtilsProvider>
+                    <input type="hidden" name="since" readOnly value={startDate.getTime()}/>
                 </div>
-                <div><input className={classes.submit} type="submit" value="Submit"/></div>
+                <div><input className={classes.submit} type="submit" value="PROCURAR"/></div>
 
             </div>
         </form>);

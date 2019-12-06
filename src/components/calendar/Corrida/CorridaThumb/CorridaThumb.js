@@ -5,7 +5,7 @@ import Distances from "../Distances/Distances";
 import {Link} from 'react-router-dom'
 import SEOtags from "../../../SeoMetas/SeoTags";
 
-const CorridaThumb = props => {
+const CorridaThumb = (props) => {
 
     const getUfImage = (uf) => {
         let colors;
