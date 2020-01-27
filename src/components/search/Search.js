@@ -15,6 +15,7 @@ const Search = (props) => {
 
     const [startDate, setStartDate] = useState(new Date());
     const [ufSelected, setUfSelected] = useState(props.selectedUF.value);
+    const [search, setSearch] = useState(props.search);
 
     const selectHandler = (event)=>{
         setUfSelected(event.target.value);
@@ -31,7 +32,8 @@ const Search = (props) => {
                         id="search"
                         label="Corrida ou local"
                         margin="normal"
-                        value={props.search}
+                        value={search}
+                        onChange={search => setSearch(search.target.value)}
                     />
                 </div>
                 <div className={classes.select}>

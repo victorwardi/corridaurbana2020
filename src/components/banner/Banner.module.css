@@ -1,0 +1,41 @@
+.container{
+    width: 100%;
+    padding: 20px;
+}
+
+.banner {
+    max-width: 728px;
+    max-height: 90px;
+    background: #005c5f;
+    margin: auto;
+}
+
+.banner img{
+   width: 100%;
+   height: auto;
+}
+
+.desktop{
+    display: block;
+    transition: all .3s ease-in-out;
+}
+
+.mobile{
+    display: none;
+    transition: all .3s ease-in-out;
+}
+
+@media screen and (max-width: 767px) {
+    
+    .desktop{
+        display: block;
+        transition: all .3s ease-in-out;
+    }
+
+    .mobile{
+        display: block;
+        transition: all .3s ease-in-out;
+    }
+
+
+}

@@ -1,23 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="016c1d2e-0cfa-4be2-aec3-ccc84fcee0ab" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/assets/ufs.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/calendar/Corrida/Preview/CorridaThumbPreview.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/calendar/Corrida/Preview/CorridaThumbPreview.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ui/loader/Loader.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ui/loader/Loader.module.css" afterDir="false" />
+    <list default="true" id="016c1d2e-0cfa-4be2-aec3-ccc84fcee0ab" name="Default Changelist" comment="Filter working closes #1">
+      <change afterPath="$PROJECT_DIR$/src/components/adsense/Adsense.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/adsense/Adsense.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/banner/Banner.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/banner/Banner.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/pageTitle/PageTitle.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/pageTitle/PageTitle.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/rj.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/assets/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/styles.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/calendar/Corrida/CorridaThumb/CorridaThumb.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/calendar/Corrida/CorridaThumb/CorridaThumb.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/calendar/Corrida/CorridaThumb/CorridaThumb.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/calendar/Corrida/CorridaThumb/CorridaThumb.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/calendar/Corridas/Corridas.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/calendar/Corridas/Corridas.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/readMoreButton/ReadMoreButton.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/readMoreButton/ReadMoreButton.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/calendar/Corrida/Infos/CorridaInfos.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/calendar/Corrida/Infos/CorridaInfos.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/calendar/Corrida/Infos/CorridaInfos.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/calendar/Corrida/Infos/CorridaInfos.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/calendar/Corridas/Corridas.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/calendar/Corridas/Corridas.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/search/Search.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/search/Search.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/search/Search.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/search/Search.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/containers/Calendar/Calendar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Calendar/Calendar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/Footer/Footer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Footer/Footer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/Footer/Footer.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Footer/Footer.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/Header/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Header/Header.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/Header/Header.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Header/Header.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/Layout.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Layout.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/containers/Main/Main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Main/Main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/Menu/Nav.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Menu/Nav.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/Menu/Nav.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Menu/Nav.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,7 +88,7 @@
     <property name="project.structure.last.edited" value="Problems" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="Errors" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\IntelliJ IDEA 2018.3\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
@@ -161,7 +172,15 @@
       <workItem from="1575285375139" duration="457000" />
       <workItem from="1575286280469" duration="46946000" />
       <workItem from="1575570926469" duration="8072000" />
-      <workItem from="1575634928570" duration="12716000" />
+      <workItem from="1575634928570" duration="31214000" />
+      <workItem from="1575831475460" duration="2331000" />
+      <workItem from="1575938517127" duration="6617000" />
+      <workItem from="1576085201104" duration="7504000" />
+      <workItem from="1576360756123" duration="3443000" />
+      <workItem from="1576496238723" duration="10214000" />
+      <workItem from="1578253702065" duration="1230000" />
+      <workItem from="1579960391684" duration="17897000" />
+      <workItem from="1580059008844" duration="7854000" />
     </task>
     <task id="LOCAL-00001" summary="First Commit">
       <created>1571855376985</created>
@@ -219,7 +238,14 @@
       <option name="project" value="LOCAL" />
       <updated>1574286785935</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Filter working closes #1">
+      <created>1575652451071</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1575652451072</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -247,49 +273,74 @@
     <MESSAGE value="Changed UF param from value to slug." />
     <MESSAGE value="new header" />
     <MESSAGE value="menu search menu" />
-    <option name="LAST_COMMIT_MESSAGE" value="menu search menu" />
+    <MESSAGE value="Filter working closes #1" />
+    <option name="LAST_COMMIT_MESSAGE" value="Filter working closes #1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="690" y="271" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1575392379398">
+    <state x="552" y="183" key="#Deployment" timestamp="1576065003927">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="552" y="183" key="#Deployment/0.0.1920.1050@0.0.1920.1050" timestamp="1576065003927" />
+    <state x="640" y="252" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1576662409971">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="640" y="252" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1576662409971" />
+    <state x="690" y="271" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1580131621249">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="690" y="271" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1050/1920.3.1920.1050@0.0.1920.1050" timestamp="1575392379398" />
-    <state width="937" height="191" key="GridCell.Tab.0.bottom" timestamp="1575639733175">
+    <state x="690" y="271" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1580131621249" />
+    <state x="579" y="117" key="CommitChangelistDialog2" timestamp="1580143726099">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="579" y="117" key="CommitChangelistDialog2/0.0.1920.1050@0.0.1920.1050" timestamp="1580143726099" />
+    <state width="1263" height="194" key="GridCell.Tab.0.bottom" timestamp="1579974758871">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="937" height="191" key="GridCell.Tab.0.bottom/0.0.1920.1050/1920.3.1920.1050@0.0.1920.1050" timestamp="1575639733175" />
-    <state width="938" height="2" key="GridCell.Tab.0.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1575543016233" />
-    <state width="937" height="191" key="GridCell.Tab.0.center" timestamp="1575639733175">
+    <state width="1263" height="194" key="GridCell.Tab.0.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1579974758871" />
+    <state width="1263" height="194" key="GridCell.Tab.0.center" timestamp="1579974758870">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="937" height="191" key="GridCell.Tab.0.center/0.0.1920.1050/1920.3.1920.1050@0.0.1920.1050" timestamp="1575639733175" />
-    <state width="938" height="2" key="GridCell.Tab.0.center/0.0.1920.1050@0.0.1920.1050" timestamp="1575543016233" />
-    <state width="937" height="191" key="GridCell.Tab.0.left" timestamp="1575639733174">
+    <state width="1263" height="194" key="GridCell.Tab.0.center/0.0.1920.1050@0.0.1920.1050" timestamp="1579974758870" />
+    <state width="1263" height="194" key="GridCell.Tab.0.left" timestamp="1579974758869">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="937" height="191" key="GridCell.Tab.0.left/0.0.1920.1050/1920.3.1920.1050@0.0.1920.1050" timestamp="1575639733174" />
-    <state width="938" height="2" key="GridCell.Tab.0.left/0.0.1920.1050@0.0.1920.1050" timestamp="1575543016233" />
-    <state width="937" height="191" key="GridCell.Tab.0.right" timestamp="1575639733175">
+    <state width="1263" height="194" key="GridCell.Tab.0.left/0.0.1920.1050@0.0.1920.1050" timestamp="1579974758869" />
+    <state width="1263" height="194" key="GridCell.Tab.0.right" timestamp="1579974758871">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="937" height="191" key="GridCell.Tab.0.right/0.0.1920.1050/1920.3.1920.1050@0.0.1920.1050" timestamp="1575639733175" />
-    <state width="938" height="2" key="GridCell.Tab.0.right/0.0.1920.1050@0.0.1920.1050" timestamp="1575543016233" />
+    <state width="1263" height="194" key="GridCell.Tab.0.right/0.0.1920.1050@0.0.1920.1050" timestamp="1579974758871" />
     <state x="540" y="267" key="IDE.errors.dialog" timestamp="1575296560346">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="540" y="267" key="IDE.errors.dialog/0.0.1920.1050/1920.3.1920.1050@0.0.1920.1050" timestamp="1575296560346" />
-    <state x="656" y="348" key="com.intellij.ide.util.TipDialog" timestamp="1575634944814">
+    <state x="461" y="167" key="SettingsEditor" timestamp="1576064561961">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="461" y="167" key="SettingsEditor/0.0.1920.1050@0.0.1920.1050" timestamp="1576064561961" />
+    <state x="552" y="257" key="Vcs.Push.Dialog.v2" timestamp="1575652457505">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="552" y="257" key="Vcs.Push.Dialog.v2/0.0.1920.1050@0.0.1920.1050" timestamp="1575652457505" />
+    <state x="656" y="358" key="com.intellij.ide.util.TipDialog" timestamp="1580059018530">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="656" y="348" key="com.intellij.ide.util.TipDialog/0.0.1920.1050/1920.3.1920.1050@0.0.1920.1050" timestamp="1575634944814" />
-    <state x="656" y="262" width="607" height="526" key="find.popup" timestamp="1575392547597">
+    <state x="656" y="358" key="com.intellij.ide.util.TipDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1580059018530" />
+    <state x="656" y="262" width="737" height="596" key="find.popup" timestamp="1576663216644">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="656" y="262" width="607" height="526" key="find.popup/0.0.1920.1050/1920.3.1920.1050@0.0.1920.1050" timestamp="1575392547597" />
-    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup" timestamp="1575627671618">
+    <state x="656" y="262" width="737" height="596" key="find.popup/0.0.1920.1050@0.0.1920.1050" timestamp="1576663216644" />
+    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup" timestamp="1580142208982">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="623" y="227" width="672" height="678" key="search.everywhere.popup/0.0.1920.1050/1920.3.1920.1050@0.0.1920.1050" timestamp="1575627671618" />
+    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup/0.0.1920.1050@0.0.1920.1050" timestamp="1580142208982" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -301,7 +352,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/components/search/Search.js</url>
-          <line>55</line>
+          <line>57</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>

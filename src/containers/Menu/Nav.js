@@ -1,78 +1,36 @@
-import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import Drawer from '@material-ui/core/Drawer';
-import Button from '@material-ui/core/Button';
-import List from '@material-ui/core/List';
-import Divider from '@material-ui/core/Divider';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
-import ListItemText from '@material-ui/core/ListItemText';
-import InboxIcon from '@material-ui/icons/MoveToInbox';
-import MailIcon from '@material-ui/icons/Mail';
+import React, {useState} from 'react';
+import classes from './Nav.module.css';
 
-const useStyles = makeStyles({
-    list: {
-        width: 250,
-    },
-    fullList: {
-        width: 'auto',
-    },
-});
+
 
 const Nav = () => {
-    const classes = useStyles();
-    const [state, setState] = React.useState({
-        top: false,
-        left: false,
-        bottom: false,
-        right: false,
-    });
 
-    const toggleDrawer = (side, open) => event => {
-        if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
-            return;
-        }
+    const [isOpen, setIsOpen] = useState(false);
 
-        setState({ ...state, [side]: open });
-    };
-
-    const sideList = side => (
-        <div
-            className={classes.list}
-            role="presentation"
-            onClick={toggleDrawer(side, false)}
-            onKeyDown={toggleDrawer(side, false)}
-        >
-            <List>
-                {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-                    <ListItem button key={text}>
-                        <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-                        <ListItemText primary={text} />
-                    </ListItem>
-                ))}
-            </List>
-            <Divider />
-            <List>
-                {['All mail', 'Trash', 'Spam'].map((text, index) => (
-                    <ListItem button key={text}>
-                        <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-                        <ListItemText primary={text} />
-                    </ListItem>
-                ))}
-            </List>
-        </div>
-    );
-
+    const onClickMenu = () => {
+        setIsOpen(!isOpen);
+    }
 
     return (
         <div>
-            <Button onClick={toggleDrawer('left', true)}>
-               |||
-            </Button>
-            <Drawer open={state.left} onClose={toggleDrawer('left', false)}>
-                {sideList('left')}
-            </Drawer>
+            <nav id="main-nav">
+                <div className={[classes.overlayMenu, isOpen ? classes.visible : classes.invisible, isOpen && classes.isOpen].join(' ')}>
+                    <div className={classes.displayTable}>
+                        <div className={[classes.displayTableCell].join(' ')}>
+                            <ul id="menu">
+                                <li><a href="/calendario">Calendário</a></li>
+                                <li><a href="/indique-uma-corrida">Indique uma corrida</a></li>
+                                <li><a href="/sobre">Sobre Nós</a></li>
+                                <li><a href="/contato">Contato</a></li>
 
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <button className={[classes.toggleMenu, classes.cHamburger, classes.cHamburgerHTX, isOpen && classes.isActive].join(' ')} onClick={onClickMenu}>
+                    <span>Burger menu</span>
+                </button>
+            </nav>
         </div>
     );
 }

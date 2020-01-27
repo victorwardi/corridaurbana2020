@@ -4,7 +4,7 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import axios from 'axios';
 
-axios.defaults.baseURL = 'https://www.corridaurbana.com.br/wp-json/corridas/v1';
+axios.defaults.baseURL = 'https://www.corridaurbana.com.br/wp-json/';
 
 ReactDOM.render(<App />, document.getElementById('root'));
 

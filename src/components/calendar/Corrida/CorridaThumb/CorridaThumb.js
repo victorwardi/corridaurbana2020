@@ -1,8 +1,7 @@
 import React from 'react';
 import classes from './CorridaThumb.module.css';
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import Distances from "../Distances/Distances";
 import {Link} from 'react-router-dom'
+import square from '../../../../assets/images/square.png';
 import SEOtags from "../../../SeoMetas/SeoTags";
 
 const CorridaThumb = (props) => {
@@ -57,34 +56,26 @@ const CorridaThumb = (props) => {
 
 
     return (<>
-        <div className={classes.corrida} style={{borderColor: getUfImage(props.corrida.uf)}}>
-            <Link to={{
-                pathname: '/corrida/' + props.corrida.slug, state: {corrida: props.corrida}
-            }}>
+        {/*style={{borderColor: getUfImage(props.corrida.uf)}}*/}
+            <div className={classes.corrida}>
+                <Link to={{
+                    pathname: '/corrida/' + props.corrida.slug, state: {corrida: props.corrida}
+                }}><div className={classes.containerCorrida}>
 
-                    <div className={classes.date}>
-                        <span className={classes.dia}>{props.corrida.dia}</span>
-                        <span className={classes.mes}>{props.corrida.mesExtenso.substr(0, 3).toUpperCase()}</span>
-                        <span className={classes.ano}>{props.corrida.ano}</span>
+                    <img className={classes.square} src={square}/>
+                    <div className={classes.infos}>
+                        <h4 className={classes.date}>{props.corrida.dia} / {props.corrida.mesExtenso.substr(0, 3).toUpperCase()}, {props.corrida.ano}</h4>
+                        <h2 className={classes.title}>{props.corrida.titulo}</h2>
+                        <h3 className={classes.place}>{props.corrida.cidade} - {props.corrida.uf}</h3>
+                    <div className={classes.more}>Veja Mais</div>
                     </div>
-                    <div className={classes.info}>
-                        {/*<div className={classes.flag} style={{background: getUfImage(props.corrida.uf)}}>{props.corrida.uf}</div>*/}
-                        <div className={classes.title}>{props.corrida.titulo}</div>
-                        <div className={classes.place}>
-                            <FontAwesomeIcon icon="globe-americas"/>{props.corrida.cidade} - {props.corrida.uf}
-                        </div>
-                    </div>
+                </div>
+                </Link>
+                <SEOtags corrida={props.corrida}/>
+            </div>
 
 
-                {/*<div className={classes.footer}>*/}
-                {/*    <div className={classes.info}>+ MAIS INFORMAÇÕES</div>*/}
-                {/*</div>*/}
-            </Link>
-            <SEOtags corrida={props.corrida}/>
-        </div>
-
-
-    </>);
+        </>);
 };
 
 

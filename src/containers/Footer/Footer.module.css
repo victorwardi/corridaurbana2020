@@ -1,13 +1,20 @@
 /* Footer */
 .Footer {
+     background: #273036;
+
+}
+
+.container {
     color: #f1f1f1;
     padding: 20px;
     text-align: center;
-    background: #151515;
+    background: #273036;
     grid-area: Footer;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr ;
 
 }
+
+
 
 

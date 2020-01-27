@@ -1,51 +1,35 @@
 .Header {
-    display: flex;
-    justify-content: center;
-    /*background-image: linear-gradient( rgba(0, 0, 0, 0.4),  rgba(0, 0, 0, 0.4));*/
+    grid-area: Header;
+    display: block;
     background-image: radial-gradient(circle, #1abc9c, #005c5f);
     background-position-x: center;
     background-position-y: center;
     background-size: cover;
     background-repeat: no-repeat;
-    grid-area: Header;
-    flex-wrap: wrap;
-    animation: showdown 1.0s ease-in-out;
-
 
 }
-
-.headerBase {
-    content: "";
-    background-image: url("../../../src/assets/images/base.svg");
-    background-position-y: bottom;
-    background-repeat: no-repeat;
-    background-size: 105%;
-    align-self: flex-end;
-    width: 105%;
-    height: 50px;
-    margin-left: -5px;
-    margin-bottom: -2px;
-
-
-}
-
-.menu {
+.container {
     width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
 }
 
 
+.Header svg {
+    display: block;
+}
 .logo {
-    display: flex;
-    flex-wrap: wrap;
-    align-self: flex-end;
-    justify-content: center;
+    align-self: center;
 
 }
 
 .logo img {
-    max-width: 400px;
-
+    max-width: 300px;
+    transition: all .3s ease-in-out;
 }
+
 
 .logo h1 {
     font-family: 'Roboto', sans-serif;
@@ -53,24 +37,24 @@
     color: #ffffff;
     text-shadow: 1px 1px 2px #000000;
     width: 100%;
-    /*animation: showup .6s ease-out;*/
-    font-size: 2rem;
+    font-size: 1rem;
     text-align: center;
     font-weight: bolder;
 
 }
 
-/* ##Small */
-@media (min-width: 767px) {
-    .headerBase {
-        height: 100px;
+
+/* Responsive layout - when the screen is less than 767px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 767px) {
+
+
+    .logo img {
+        max-width: 200px;
+        transition: all .3s ease-in-out;
     }
 
-    .logo h1 {
-        font-size: 2.5rem;
-    }
+
 }
-
 
 @keyframes showup {
     0% {
